@@ -12,17 +12,20 @@
 }
 
 .calculator {
+    /*cursor: move;*/
 	padding:0;
 	padding-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
+    max-width: 500px;
+    max-height: 650px;
     width: 300px;
     height: 450px;
 	background: #ececec;
     border-radius: 4px;
  	box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.19);
     resize: both;
-    overflow: none;
+    overflow: hidden;
 }
 
 .entry_result_box {

@@ -34,5 +34,7 @@ $('.calc_button').click(function() {
     }
 }); 
 
+$('.calculator').draggable();
+
         
 
