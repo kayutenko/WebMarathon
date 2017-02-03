@@ -1,0 +1,34 @@
+<form class="form-template">
+	<div class="form-group">
+		<label *ngIf="question" (click)="toggleQuestion()">{{question}}</label>
+		<input autofocus *ngIf="!question" #currentForm
+			type="text"
+			class="form-control"
+			value = {{questionFormValue}} 
+			placeholder="Question text..." 
+			(keyup.enter)="toggleQuestion(currentForm.value)"
+			(blur)="focusLost(currentForm.value)">
+		<!-- <button 
+			type="submit" 
+			(click)="toggleQuestion(questionFormValue)" 
+			class="btn btn-primary">{{buttonName}}</button> -->
+	</div>
+	<div *ngFor="let answer of possibleAnswers; let lastA=last" 
+		[ngClass]="{'lastA' : focused}" class="form-group">
+		<input  type="text"  
+        	[(ngModel)]="answer.value"
+        	[ngModelOptions]="{standalone: true}"
+			class="form-control"
+			placeholder="Answer {{answer.id}}" 
+			(keyup.enter)="addAnswer()"
+		>
+		<button class="btn btn-primary">Del</button>
+	</div>
+    <div class="form-group">    
+		<input  type="text" 
+			class="form-control"
+			placeholder="Add answer" 
+			(click)="addAnswer()"
+		>
+	</div>
+</form>
