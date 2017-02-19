@@ -1,0 +1,50 @@
+
+@font-face {
+  font-family: "MJ AlGhifari";
+  src: url("../fonts/MJ AlGhifari.ttf");
+}
+body {
+  background: #31698f;
+}
+
+.app-logo {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.app-logo a {
+  font-family: MJ AlGhifari, "Times New Roman", Tahoma;
+  color: white;
+  font-size: 50pt;
+
+  text-decoration: none;
+}
+
+.main-form {
+  /*margin-top: 100px;*/
+}
+
+.question {
+  background: rgba(247, 247, 249, 0.92);
+  border: solid rgba(169, 169, 169, 0.29) 1px;
+  padding: 15px 15px 0 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 20px 0 #17364a;
+}
+
+.form-name {
+  background: #9dbac8;
+}
+
+.form-name h1 {
+  margin-bottom: 15px;
+  font-size: 21pt;
+  color: #0f3b5a;
+  text-align: center;
+}
+
+.submit-form {
+  box-shadow: 1px 2px 20px 0 #17364a;
+  font-weight: bold;
+}
