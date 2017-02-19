@@ -50,7 +50,7 @@ export class Answer {
       
     <!--Add button for dummy question-->
       <div class="form-group" *ngIf="question.isDummy" >
-        <button type="button" class="btn btn-primary" (click)="addMe(question.questionText)">Add question</button>
+        <button class="btn btn-primary" (click)="addMe(question.questionText); $event.preventDefault()">Add question</button>
       </div>
     <!--Add button for dummy question end-->
       
