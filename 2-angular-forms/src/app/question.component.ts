@@ -50,7 +50,7 @@ export class Answer {
       
     <!--Add button for dummy question-->
       <div class="form-group" *ngIf="question.isDummy" >
-        <button class="btn btn-primary" (click)="addMe(question.questionText)">Add question</button>
+        <button type="button" class="btn btn-primary" (click)="addMe(question.questionText)">Add question</button>
       </div>
     <!--Add button for dummy question end-->
       
@@ -117,7 +117,7 @@ export class QuestionComponent {
   question: Question;
 
   addMe(questionText:string): void {
-    this.add.emit(null)
+    this.add.emit(null);
   }
 
   addAnswer(index: number): void {
