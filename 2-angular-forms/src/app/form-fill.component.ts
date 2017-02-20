@@ -2,7 +2,7 @@
  * Created by rusdka on 19.02.2017.
  */
 import { Component, OnInit, Input} from "@angular/core";
-import {Question, Answer} from "./question.component";
+import {Question, Answer, clearSelectedAnswers} from "./question.component";
 import {Form} from "./form.component";
 import {FormService} from "./form.service";
 
@@ -55,5 +55,7 @@ export class FormFillComponent implements OnInit {
       currentAnswers.push([question.questionText, this.getAnswerValues(question)])
     }
     this.formService.saveSubmission(currentAnswers);
+    clearSelectedAnswers(this.form.questions);
+
   }
 }

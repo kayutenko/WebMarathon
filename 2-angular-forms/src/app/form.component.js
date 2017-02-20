@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by rusdka on 11.02.2017.
  */
 var core_1 = require("@angular/core");
+var question_component_1 = require("./question.component");
 var form_service_1 = require("./form.service");
 var Form = (function () {
     function Form() {
@@ -61,7 +62,19 @@ var FormComponent = (function () {
     FormComponent.prototype.toggleView = function (view) {
         this.currentView = view;
     };
+    //
+    //   clearSelectedAnswers(): void{
+    //     for (let question of this.questionList) {
+    //       if (question.type === 'checkbox') {
+    //         question.selectedAnswer = []
+    //       } else {
+    //         question.selectedAnswer = null
+    //       }
+    //     }
+    //
+    // }
     FormComponent.prototype.saveForm = function () {
+        question_component_1.clearSelectedAnswers(this.questionList);
         var currentFormName = this.formName;
         if (!this.formName) {
             currentFormName = 'Untitled Form';

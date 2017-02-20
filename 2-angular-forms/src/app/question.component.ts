@@ -12,6 +12,19 @@ export class Question {
   isDummy: boolean;
 }
 
+export function clearSelectedAnswers(questions: Question[]): Question[] {
+  if (questions) {
+    for (let question of questions) {
+        if (question.type === 'checkbox') {
+          question.selectedAnswer = []
+        } else {
+          question.selectedAnswer = null
+        }
+    }
+  }
+  return questions
+}
+
 export class Answer {
   id: any;
   value: string;

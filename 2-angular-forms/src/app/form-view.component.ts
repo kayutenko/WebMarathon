@@ -78,6 +78,5 @@ export class FormViewComponent{
         question.selectedAnswer.splice(question.selectedAnswer.indexOf(answer.id), 1);
       }
     }
-    console.log(question.selectedAnswer);
   }
 }

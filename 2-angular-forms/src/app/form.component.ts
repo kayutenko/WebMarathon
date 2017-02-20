@@ -2,7 +2,7 @@
  * Created by rusdka on 11.02.2017.
  */
 import { Component, OnInit, Output, EventEmitter} from "@angular/core";
-import {Question, Answer} from "./question.component";
+import {Question, Answer, clearSelectedAnswers} from "./question.component";
 import {FormService} from "./form.service";
 
 export class Form {
@@ -121,8 +121,20 @@ export class FormComponent implements OnInit{
   toggleView(view:string):void {
       this.currentView = view;
   }
+//
+//   clearSelectedAnswers(): void{
+//     for (let question of this.questionList) {
+//       if (question.type === 'checkbox') {
+//         question.selectedAnswer = []
+//       } else {
+//         question.selectedAnswer = null
+//       }
+//     }
+//
+// }
 
   saveForm():void {
+    clearSelectedAnswers(this.questionList);
     let currentFormName: string = this.formName;
     if (!this.formName) {
       currentFormName = 'Untitled Form';

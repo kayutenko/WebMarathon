@@ -51,7 +51,6 @@ var FormViewComponent = (function () {
                 question.selectedAnswer.splice(question.selectedAnswer.indexOf(answer.id), 1);
             }
         }
-        console.log(question.selectedAnswer);
     };
     __decorate([
         core_1.Input(), 

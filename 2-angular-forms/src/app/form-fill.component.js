@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by rusdka on 19.02.2017.
  */
 var core_1 = require("@angular/core");
+var question_component_1 = require("./question.component");
 var form_service_1 = require("./form.service");
 var FormFillComponent = (function () {
     function FormFillComponent(formService) {
@@ -49,6 +50,7 @@ var FormFillComponent = (function () {
             currentAnswers.push([question.questionText, this.getAnswerValues(question)]);
         }
         this.formService.saveSubmission(currentAnswers);
+        question_component_1.clearSelectedAnswers(this.form.questions);
     };
     FormFillComponent = __decorate([
         core_1.Component({
